@@ -16,7 +16,7 @@ const Home: NextPage = () => {
   const [desc, setDesc] = useState("");
   const [lang, setLang] = useState<VibeType>("直接发给chatgpt");
   const [generatedDescs, setGeneratedDescs] = useState<string>("");
-  const defultDesc = '关于65岁退休'
+  const defultDesc = '写个邮件和领导请三天假去过自己的60大寿，不会耽误项目进度'
   console.log("Streamed response: ", {generatedDescs});
   let promptObj = {
     "直接发给chatgpt":"",
