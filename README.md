@@ -1,8 +1,8 @@
-# [EmailHelper](https://email-helper.vercel.app/)
-
+# [笨笨](https://email-helper.vercel.app/)
+你的个人工作助理
 
 ## Support
-`老胡生成器`,`中文邮件`,`英文邮件`,`说了啥`
+`直接发给chatgpt`,`写个正则`,`写个英语小作文`,`老胡生成器`,`中文邮件`,`英文邮件`,`说了啥`
 
 PR welcome
 

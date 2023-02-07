@@ -12,10 +12,15 @@ function classNames(...classes: string[]) {
 
 const vibes = [
   "直接发给chatgpt",
-  "老胡生成器",
+  "日报",
   "中文邮件",
   "英文邮件",
   "说了啥",
+  "写个正则",
+  "老胡生成器",
+  "根据单词写个英语作文",
+  "修改英语语法",
+  "小故事"
 ] as const;
 
 export type VibeType = typeof vibes[number];

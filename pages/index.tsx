@@ -23,7 +23,12 @@ const Home: NextPage = () => {
     "英文邮件": "Generate a business email in UK English that is friendly, but still professional and appropriate for the workplace.The topic is",
     "中文邮件": "Generate a business email in Simplified Chinese  that is friendly, but still professional and appropriate for the workplace.The topic is",
     "说了啥":"用一段话详略得当总结这段聊天内容",
-    "老胡生成器":"按照下面模板，写篇文章: '近期互联网上出现了___, 老胡看到___,知道大家很___,老胡忍不住啰嗦几句,虽然___, 确实存在部分___, 但是___, 最后老胡呼吁___。'，内容是"
+    "老胡生成器":"按照下面模板，写篇文章: '近期互联网上出现了___, 老胡看到___,知道大家很___,老胡忍不住啰嗦几句,虽然___, 确实存在部分___, 但是___, 最后老胡呼吁___。'，内容是",
+    "写个正则":"写个正则表达式",
+    "根据单词写个英语作文":"Meet the requirements of IELTS 7,write a story of 100 words using following words",
+    "修改英语语法":"Meet the requirements of IELTS 7, modify the following sentence",
+    "日报":"Generate a daily report in Simplified Chinese that is friendly, but still professional and appropriate for the workplace.The topic is",
+    "小故事":"Generate a short story in Simplified Chinese for child before sleep,The topic is",
   }
   // 无序列表
   
@@ -37,6 +42,8 @@ const Home: NextPage = () => {
     e.preventDefault();
     setGeneratedDescs("");
     setLoading(true);
+    
+    // const response = await fetch("https://w1bz4wktbi.hk.aircode.run/hello", {
     const response = await fetch("/api/generate", {
       method: "POST",
       headers: {
@@ -98,7 +105,7 @@ const Home: NextPage = () => {
 
           <a
             className="flex max-w-fit items-center justify-center space-x-2 rounded-full border border-gray-300 bg-white px-4 py-2 text-sm text-gray-600 shadow-md transition-colors hover:bg-gray-100 mb-5"
-            href="https://github.com/shengxinjing/email-helper"
+            href="https://github.com/shengxinjing/benben"
             target="_blank"
             rel="noopener noreferrer"
           >
@@ -118,7 +125,7 @@ const Home: NextPage = () => {
         </div>
 
         <h1 className="sm:text-3xl text-2xl max-w-1xl font-bold text-slate-900">
-          Generate your business emails in seconds
+          你的人工助理小助手-笨笨
         </h1>
         {/* <p className="text-slate-500 mt-5">18,167 bios generated so far.</p> */}
         <div className="max-w-xl w-full">
@@ -155,7 +162,7 @@ const Home: NextPage = () => {
               className="bg-black rounded-xl text-white font-medium px-4 py-2 sm:mt-4 mt-3 hover:bg-black/80 w-full"
               onClick={(e) => generateDesc(e)}
             >
-              Generate your email &rarr;
+              生成 &rarr;
             </button>
           )}
           {loading && (
@@ -180,7 +187,7 @@ const Home: NextPage = () => {
                 <>
                   <div>
                     <h2 className="sm:text-4xl text-3xl font-bold text-slate-900 mx-auto">
-                      Your generated email
+                      生成内容
                     </h2>
                   </div>
                   <div className="space-y-8 flex flex-col items-center justify-center max-w-xl mx-auto  whitespace-pre-wrap">
