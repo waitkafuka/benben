@@ -14,27 +14,24 @@ import ResizablePanel from "../components/ResizablePanel";
 const Home: NextPage = () => {
   const [loading, setLoading] = useState(false);
   const [desc, setDesc] = useState("");
-  const [lang, setLang] = useState<VibeType>("English");
+  const [lang, setLang] = useState<VibeType>("直接发给chatgpt");
   const [generatedDescs, setGeneratedDescs] = useState<string>("");
-  const defultDesc = 'Tell David to have a meeting next Monday morning from Hudson.'
+  const defultDesc = '关于65岁退休'
   console.log("Streamed response: ", {generatedDescs});
   let promptObj = {
-    'English': "UK English",
-    "中文": "Simplified Chinese",
-    "繁體中文": "Traditional Chinese",
-    "日本語": "Japanese",
-    "Italiano": "Italian",
-    "Deutsch": "German",
-    "Español": "Spanish",
-    "Français": "French",
-    "Nederlands": "Dutch",
-    "한국어": "Korean",
-    "ភាសាខ្មែរ":"Khmer",
-    "हिंदी" : "Hindi"
+    "直接发给chatgpt":"",
+    "英文邮件": "Generate a business email in UK English that is friendly, but still professional and appropriate for the workplace.The topic is",
+    "中文邮件": "Generate a business email in Simplified Chinese  that is friendly, but still professional and appropriate for the workplace.The topic is",
+    "说了啥":"用一段话详略得当总结这段聊天内容",
+    "老胡生成器":"按照下面模板，写篇文章: '近期互联网上出现了___, 老胡看到___,知道大家很___,老胡忍不住啰嗦几句,虽然___, 确实存在部分___, 但是___, 最后老胡呼吁___。'，内容是"
   }
+  // 无序列表
+  
+
   let text = desc||defultDesc
+
   // Generate a business email in UK English that is friendly, but still professional and appropriate for the workplace. The email topic is:
-  const prompt = `Generate a business email in ${promptObj[lang]} that is friendly, but still professional and appropriate for the workplace. The email topic is:${text}${text.slice(-1) === "." ? "" : "."}`
+  const prompt = `${promptObj[lang]}:\n${text}${text.slice(-1) === "." ? "" : "."}`
 
   const generateDesc = async (e: any) => {
     e.preventDefault();
@@ -133,7 +130,7 @@ const Home: NextPage = () => {
               alt="1 icon"
             />
             <p className="text-left font-medium">
-              Write a few sentences about your desired email.
+              随便写点主题
             </p>
           </div>
           <textarea
@@ -147,7 +144,7 @@ const Home: NextPage = () => {
           />
           <div className="flex mb-5 items-center space-x-3">
             <Image src="/2-black.png" width={30} height={30} alt="1 icon" />
-            <p className="text-left font-medium">Select your language.</p>
+            <p className="text-left font-medium">选择目的.</p>
           </div>
           <div className="block">
             <DropDown vibe={lang} setVibe={(newLang) => setLang(newLang)} />
