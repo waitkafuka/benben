@@ -25,10 +25,10 @@ const Home: NextPage = () => {
     "说了啥":"用一段话详略得当总结这段聊天内容",
     "老胡生成器":"按照下面模板，写篇文章: '近期互联网上出现了___, 老胡看到___,知道大家很___,老胡忍不住啰嗦几句,虽然___, 确实存在部分___, 但是___, 最后老胡呼吁___。'，内容是",
     "写个正则":"写个正则表达式",
-    "根据单词写个英语作文":"Meet the requirements of IELTS 7,write a story of 100 words using following words",
-    "修改英语语法":"Meet the requirements of IELTS 7, modify the following sentence",
-    "日报":"Generate a daily report in Simplified Chinese that is friendly, but still professional and appropriate for the workplace.The topic is",
-    "小故事":"Generate a short story in Simplified Chinese for child before sleep,The topic is",
+    "根据单词写个英语作文":"写一个符合雅思7分要求的100个单词的小作文，用到下面的单词",
+    "修改英语语法":"帮我改一下下面这段话的英语语法，符合雅思七分的要求",
+    "日报":"帮我写个工作的日报，内容+列表的形式",
+    "小故事":"帮我生成一个500字的有意思的小故事，用来哄媳妇睡觉",
   }
   // 无序列表
   
